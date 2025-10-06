@@ -1,0 +1,8 @@
+Flask>=2.0
+Flask-JWT-Extended>=4.0
+Flask-SQLAlchemy>=3.0
+Flask-Cors>=3.0
+PyMySQL>=1.0        # only needed if using MySQL
+TextBlob>=0.17.1
+Werkzeug>=2.0
+cryptography>=40.0

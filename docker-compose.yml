@@ -1,0 +1,28 @@
+version: "3.9"
+services:
+  web:
+    build: .
+    container_name: insighthub_app
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8
+    container_name: insighthub_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: insighthub
+      MYSQL_USER: insighthub_user
+      MYSQL_PASSWORD: password
+    ports:
+      - "3307:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+
+volumes:
+  dbdata:
