@@ -68,12 +68,15 @@ MYSQL_USER=root
 MYSQL_PASSWORD=your_password  
 MYSQL_DB=insighthub  
 
+
 ### Build and Run with Docker  
 docker-compose up --build  
+
 
 ### Your services will start as:  
 Flask API: http://127.0.0.1:5000  
 MySQL: inside Docker container  
+
 
 ### Authentication  
 Include your JWT token in the Authorization Header for protected routes:  
@@ -153,8 +156,7 @@ insighthub/
 └── .env
 ```
 
-### Future Enhancements
-
+### Future Enhancements:
 - Frontend Dashboard with Analytics Visualization
 - Export feedback data to CSV/Excel
 - Email notifications for admins
