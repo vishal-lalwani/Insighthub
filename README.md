@@ -1,4 +1,4 @@
-# 🧠 InsightHub — AI-Powered Feedback Management System  
+# InsightHub — AI-Powered Feedback Management System  
 
 ---
 
@@ -36,7 +36,7 @@ Admin Analytics & Insights
 
 ---
 
-## 🛠️ Tech Stack  
+## Tech Stack  
 
 | Category | Technology |
 |-----------|-------------|
@@ -52,6 +52,7 @@ Admin Analytics & Insights
 ---
 
 ## Installation  
+---
 
 #### Clone the Repository  
 ```bash
@@ -60,26 +61,28 @@ cd insighthub
 ```
 
 #### Create .env File
-SECRET_KEY=your_secret_key
-JWT_SECRET_KEY=your_jwt_secret_key
-MYSQL_HOST=db
-MYSQL_USER=root
-MYSQL_PASSWORD=your_password
-MYSQL_DB=insighthub
+SECRET_KEY=your_secret_key  
+JWT_SECRET_KEY=your_jwt_secret_key  
+MYSQL_HOST=db  
+MYSQL_USER=root  
+MYSQL_PASSWORD=your_password  
+MYSQL_DB=insighthub  
 
 #### Build and Run with Docker
-docker-compose up --build
+docker-compose up --build  
 
 #### Your services will start as:
-Flask API: http://127.0.0.1:5000
-MySQL: inside Docker container
+Flask API: http://127.0.0.1:5000  
+MySQL: inside Docker container  
 
 #### Authentication
-Include your JWT token in the Authorization Header for protected routes:
-Authorization: Bearer <access_token>
-You receive this token after a successful signup or login.
+Include your JWT token in the Authorization Header for protected routes:  
+Authorization: Bearer <access_token>  
+You receive this token after a successful signup or login.  
 
 ## API Endpoints
+---
+
 ### Authentication
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -99,11 +102,11 @@ You receive this token after a successful signup or login.
 | GET | /admin/analytics | View sentiment and rating analytics |
 
 ### Testing with Postman
-
-1. Open Postman and create a new Collection named InsightHub.
-2. Add all API routes listed above.
-3. Test signup/login to get a JWT token.
-4. Use {{access_token}} as an environment variable in Authorization header.
+---
+1. Open Postman and create a new Collection named InsightHub.  
+2. Add all API routes listed above.  
+3. Test signup/login to get a JWT token.  
+4. Use {{access_token}} as an environment variable in Authorization header.  
 
 ### Postman Test Script Example
 ```bash
