@@ -60,28 +60,38 @@ git clone https://github.com/your-username/insighthub.git
 cd insighthub
 ```
 
+
 ### Create .env File  
+```bash
 SECRET_KEY=your_secret_key  
 JWT_SECRET_KEY=your_jwt_secret_key  
 MYSQL_HOST=db  
 MYSQL_USER=root  
 MYSQL_PASSWORD=your_password  
 MYSQL_DB=insighthub  
+```
 
 
 ### Build and Run with Docker  
+```bash
 docker-compose up --build  
+```
 
 
 ### Your services will start as:  
+```
 Flask API: http://127.0.0.1:5000  
 MySQL: inside Docker container  
+```
 
 
 ### Authentication  
+```
 Include your JWT token in the Authorization Header for protected routes:  
 Authorization: Bearer <access_token>  
 You receive this token after a successful signup or login.  
+```
+
 
 ## API Endpoints
 ---
