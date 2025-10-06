@@ -1,24 +1,17 @@
 # 🧠 InsightHub — AI-Powered Feedback Management System  
 
-![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
-![Flask](https://img.shields.io/badge/Flask-Backend-green?logo=flask)
-![MySQL](https://img.shields.io/badge/Database-MySQL-orange?logo=mysql)
-![Docker](https://img.shields.io/badge/Container-Docker-blue?logo=docker)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
-![Status](https://img.shields.io/badge/Status-Active-success)
-
 ---
 
-## 📘 Overview  
+## Overview  
 
 **InsightHub** is a Flask-based feedback management system that collects user feedback, performs **sentiment analysis**, and provides actionable insights for admins.  
 It’s fully **Dockerized**, integrates **MySQL** for structured data storage, and supports **role-based authentication** via **JWT tokens**.
 
-> 🧩 Designed for businesses to analyze customer sentiment and improve product experience.
+> Designed for businesses to analyze customer sentiment and improve product experience.
 
 ---
 
-## 🚀 Features  
+## Features  
 
 - Submit feedback with category and rating.  
 - Automatic sentiment detection using **TextBlob**.  
@@ -60,13 +53,13 @@ Admin Analytics & Insights
 
 ## Installation  
 
-### Clone the Repository  
+#### Clone the Repository  
 ```bash
 git clone https://github.com/your-username/insighthub.git
 cd insighthub
 ```
 
-## Create .env File
+#### Create .env File
 SECRET_KEY=your_secret_key
 JWT_SECRET_KEY=your_jwt_secret_key
 MYSQL_HOST=db
@@ -74,35 +67,38 @@ MYSQL_USER=root
 MYSQL_PASSWORD=your_password
 MYSQL_DB=insighthub
 
-## Build and Run with Docker
+#### Build and Run with Docker
 docker-compose up --build
 
-### Your services will start as:
+#### Your services will start as:
 Flask API: http://127.0.0.1:5000
 MySQL: inside Docker container
 
-## Authentication
+#### Authentication
 Include your JWT token in the Authorization Header for protected routes:
 Authorization: Bearer <access_token>
 You receive this token after a successful signup or login.
 
 ## API Endpoints
 ### Authentication
-Method	Endpoint	Description
-POST	/signup	Register a new user
-POST	/login	Login and get JWT token
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | /signup | Register a new user |
+| POST | /login | Login and get JWT token |
 
 ### User Endpoints
-Method	Endpoint	Description
-POST	/feedback	Submit feedback
-GET	/my-feedbacks	View your feedback history
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | /feedback | Submit feedback |
+| GET | /my-feedbacks | View your feedback history |
 
 ### Admin Endpoints
-Method	Endpoint	Description
-GET	/admin/feedbacks	View all user feedback
-GET	/admin/analytics	View sentiment and rating analytics
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | /admin/feedbacks | View all user feedback |
+| GET | /admin/analytics | View sentiment and rating analytics |
 
-## Testing with Postman
+### Testing with Postman
 
 1. Open Postman and create a new Collection named InsightHub.
 2. Add all API routes listed above.
