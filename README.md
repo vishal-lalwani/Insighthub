@@ -23,7 +23,7 @@ It’s fully **Dockerized**, integrates **MySQL** for structured data storage, a
 
 ---
 
-## 🧠 System Architecture  
+## System Architecture  
 ```
 Frontend (Postman / Future UI)
 ↓
@@ -60,7 +60,7 @@ git clone https://github.com/your-username/insighthub.git
 cd insighthub
 ```
 
-#### Create .env File
+### Create .env File  
 SECRET_KEY=your_secret_key  
 JWT_SECRET_KEY=your_jwt_secret_key  
 MYSQL_HOST=db  
@@ -68,14 +68,14 @@ MYSQL_USER=root
 MYSQL_PASSWORD=your_password  
 MYSQL_DB=insighthub  
 
-#### Build and Run with Docker
+### Build and Run with Docker  
 docker-compose up --build  
 
-#### Your services will start as:
+### Your services will start as:  
 Flask API: http://127.0.0.1:5000  
 MySQL: inside Docker container  
 
-#### Authentication
+### Authentication  
 Include your JWT token in the Authorization Header for protected routes:  
 Authorization: Bearer <access_token>  
 You receive this token after a successful signup or login.  
